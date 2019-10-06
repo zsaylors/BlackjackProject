@@ -25,7 +25,7 @@ public class Bet {
 		boolean gamble = true;
 		boolean runMenu = true;
 		while (runMenu) {
-			System.out.println("Would you like to gamble?\n" + "1.  Yes\n" + "2.  No");
+			System.out.println("\nWould you like to gamble?\n" + "1.  Yes\n" + "2.  No");
 			String playerDecision = kb.nextLine();
 			switch (playerDecision) {
 			case "1":
@@ -57,13 +57,13 @@ public class Bet {
 			do {
 				try {
 					if (gamble) {
-						System.out.println("How much would you like to gamble? (0 - 10000)");
+						System.out.println("\nHow much would you like to gamble? (0 - 10000)");
 						gambleAmount = kb.nextInt();
 
 						if (gambleAmount < 0 || gambleAmount > 10000) {
 							System.out.println("Invalid Number.  Please enter an ammount between 1 and 10000.");
 						} else {
-							System.out.println("You got it!  Betting " + gambleAmount + "!");
+							System.out.println("\nYou got it!  Betting " + gambleAmount + "!");
 							nonValidAmount = false;
 						}
 					}
@@ -81,12 +81,15 @@ public class Bet {
 	}
 
 	// Sets the cumulative gambling amount.
-	public int setCumulativeGambleAmount(boolean win) {
-		if (win) {
-			return cumulativeGambleAmount += gambleAmount * 2;
+	public int setCumulativeGambleAmount(int win) {
+		if (win == 1) {
+			cumulativeGambleAmount += gambleAmount * 2;
+		} else if (win == 2) {
+			cumulativeGambleAmount += Math.round(gambleAmount * 3 / 2 + gambleAmount - 0.5);
 		} else {
-			return cumulativeGambleAmount -= gambleAmount;
+			cumulativeGambleAmount -= gambleAmount;
 		}
+		return cumulativeGambleAmount;
 	}
 
 	// Prints cumulative gambling amount. The toString is found in the

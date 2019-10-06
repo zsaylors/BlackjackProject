@@ -62,7 +62,7 @@ public class Deck {
 		int numberOfDecks = 1;
 		boolean validNumber = true;
 		while (validNumber) {
-			System.out.println("How many decks you would you like to use?  (1, 2, 6, or 8)");
+			System.out.println("\nHow many decks you would you like to use?  (1, 2, 6, or 8)");
 			userChoice = kb.nextLine();
 			switch (userChoice) {
 			case "1":
