@@ -63,7 +63,7 @@ public class Bet {
 						if (gambleAmount < 0 || gambleAmount > 10000) {
 							System.out.println("Invalid Number.  Please enter an ammount between 1 and 10000.");
 						} else {
-							System.out.println("\nYou got it!  Betting " + gambleAmount + "!");
+							System.out.println("\nYou got it!  Betting \uD83D\uDCB2" + gambleAmount + "!");
 							nonValidAmount = false;
 						}
 					}
@@ -75,6 +75,9 @@ public class Bet {
 		}
 	}
 
+	public void setGambleAmountDouble() {
+		this.gambleAmount = gambleAmount * 2;
+	}
 	// returns the cumulative gambling amount.
 	public int getCumulativeGambleAmount() {
 		return cumulativeGambleAmount;
@@ -95,7 +98,7 @@ public class Bet {
 	// Prints cumulative gambling amount. The toString is found in the
 	// continuePlaying() method / menu at the bottom of the Table class.
 	public String toString() {
-		return "\nYour cumulative earnings are: " + getCumulativeGambleAmount();
+		return "\nYour cumulative earnings are: \uD83D\uDCB2" + getCumulativeGambleAmount();
 	}
 
 }

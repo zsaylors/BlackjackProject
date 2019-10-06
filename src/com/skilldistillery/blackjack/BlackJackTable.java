@@ -77,7 +77,7 @@ public class BlackJackTable {
 		play = false;
 		boolean runMenu = true;
 		while (runMenu) {
-			System.out.println("\nWould you like to\n" + "1.  Stay\n" + "2.  Hit");
+			System.out.println("\nWould you like to\n" + "1.  Stay\n" + "2.  Hit\n" + "3.  Double");
 			String playerDecision = kb.nextLine();
 			switch (playerDecision) {
 			case "1":
@@ -87,6 +87,10 @@ public class BlackJackTable {
 			case "2":
 				runMenu = false;
 				hit();
+				break;
+			case "3":
+				runMenu = false;
+				doubleBet();
 				break;
 			default:
 				System.out.println("Invalid choice.  Try again.");
@@ -114,7 +118,15 @@ public class BlackJackTable {
 
 		didDealerWin();
 	}
-
+	
+	// Doubles the players wager but player only gets one card to draw.
+	private void doubleBet() {
+		playerOne.addCard(deck.dealCard());
+		System.out.println("Your Hand:\n" + playerOne.toString() + "\n");
+		bet.setGambleAmountDouble();
+		stay();
+	}
+	
 	// Checks if player gets blackjack or bust whenever show cards method is run.
 	// Else it goes to the makeDecision method / menu.
 	// Show dealers hand to ensure dealer did not also have a blackjack.
@@ -193,9 +205,9 @@ public class BlackJackTable {
 				user.setGambleEarnings(bet.getCumulativeGambleAmount());
 				BlackJackHighScores hs = new BlackJackHighScores();
 				hs.writeHighScores(user);
-
-				System.out.println("Goodbye!");
-
+				System.out.println("\nYour highscores are:");
+				System.out.println("Username \t\tScore \t\tGambling Winnings\n" + user.toString());
+				System.out.println("\nGoodbye!");
 				play = false;
 				runMenu = false;
 				break;

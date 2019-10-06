@@ -32,7 +32,7 @@ abstract public class Hand {
 		}
 		
 		// Redundant if statements to be removed when cards.size() bug is figured out.
-		// The amount of if's statements should ensure that the program does not break.
+		// The amount of if statements should ensure that the program does not break.
 		if (cards.size() >= 1) {
 			cards.remove(0);
 		}

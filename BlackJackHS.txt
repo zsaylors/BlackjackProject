@@ -1,5 +1,7 @@
-35, Strider, 30000
-20, Bobert, 140
-15, Geoffrey, 50
+-30, Bobert, -3150
 -5, Zombie1, 10
+15, Geoffrey, 50
+25, ZakS, 1100
+35, Strider, 300
 110, John Smith, 740
+25, okay5, 0
