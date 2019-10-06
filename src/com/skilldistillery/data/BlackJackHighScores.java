@@ -7,9 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class BlackJackHighScores {
 	// F I E L D S
@@ -18,9 +16,9 @@ public class BlackJackHighScores {
 	// C O N S T R U C T O R S
 
 	// M E T H O D S
-	// Imports highs cores into a set.
+	// Imports high scores into a set.
 	private List<UserName> importHighScores() {
-		Set<UserName> usernameSet = new HashSet<>();
+		List<UserName> usernameList = new ArrayList<>();
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("BlackJackHS.txt"));
 			String userData;
@@ -31,7 +29,7 @@ public class BlackJackHighScores {
 				int highscore = Integer.parseInt(user[0]);
 				String username = user[1];
 				int gambleEarnings = Integer.parseInt(user[2]);
-				usernameSet.add(new UserName(username, highscore, gambleEarnings));
+				usernameList.add(new UserName(username, highscore, gambleEarnings));
 			}
 			br.close();
 		} catch (FileNotFoundException e) {
@@ -39,10 +37,20 @@ public class BlackJackHighScores {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return sortList(usernameList);
+	}
 
-		System.out.println(usernameSet);
-
-		List<UserName> usernameList = new ArrayList<UserName>(usernameSet);
+	// The following methods sorts the user name list. I could not get the comparator
+	// to work, but based off a stack overflow post, I learned Java 8 allows for the
+	// sort method to be used directly.
+	public List<UserName> sortList(List<UserName> usernameList) {
+		usernameList.sort((UserName u1, UserName u2) -> {
+			if (u1.getHighScore() > u2.getHighScore())
+				return 1;
+			if (u1.getHighScore() < u2.getHighScore())
+				return -1;
+			return 0;
+		});
 		return usernameList;
 	}
 
@@ -111,5 +119,4 @@ public class BlackJackHighScores {
 			return false;
 		return true;
 	}
-
 }

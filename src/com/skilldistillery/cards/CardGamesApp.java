@@ -29,10 +29,12 @@ public class CardGamesApp {
 
 	// Menu design
 	private void menuPrintOut() {
-		System.out.println("\nPick a game:\n" 
-				+ "1.  Blackjack\n" 
-				+ "\n\t... more to come!\n" 
-				+ "\n\n"			
+		System.out.println("--------------------");
+		System.out.println("| \uD83C\uDCA1  CARD GAMES  \uD83C\uDCBE |");
+		System.out.println("--------------------");
+		System.out.println("Pick a game:\n" 
+				+ "1.  Blackjack\n"  
+				+ "\n"			
 				+ "View High Scores:\n" 
 				+ "2. Blackjack");
 	}

@@ -217,7 +217,7 @@ public class BlackJackTable {
 
 		do {
 			user = new UserName();
-			System.out.println("Please enter a username: (4-10 characters)");
+			System.out.println("\nPlease enter a username: (4-10 characters)");
 			System.out.print(">> ");
 			username = kb.nextLine();
 

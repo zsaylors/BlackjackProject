@@ -1,0 +1,5 @@
+35, Strider, 30000
+20, Bobert, 140
+15, Geoffrey, 50
+-5, Zombie1, 10
+110, John Smith, 740

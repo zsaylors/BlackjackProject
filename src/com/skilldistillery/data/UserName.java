@@ -39,7 +39,7 @@ public class UserName {
 	
 	// Prints user name, the high score, and the gambling earnings to high scores list.
 	public String toString() {
-		return username + "\t\t\t" + highScore + "\t\t\t" + gambleEarnings;
+		return username + "\t\t\t" + highScore + "\t\t\t\uD83D\uDCB2" + gambleEarnings;
 	}
 	
 	// Sets high score.  Formula: +10 if player beats dealer, +20 for blackjack, -5 if dealer wins, 0 for busts.
