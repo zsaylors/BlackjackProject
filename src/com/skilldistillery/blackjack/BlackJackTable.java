@@ -41,7 +41,7 @@ public class BlackJackTable {
 	// Note: There was no standard re-shuffle rule online, so I went with when the
 	// deck has ~20% capacity.  This should prevent the game from breaking if a
 	// player or dealer continuously draws low numbers with a single 52 card deck.
-	public void shuffleDeck() {
+	private void shuffleDeck() {
 		if (gameDeck.size() == 0 || gameDeck.size() < ((int) (deck.getNum() * 0.2 * 52))) {
 			deck = new Deck();
 			gameDeck = deck.shuffle();
@@ -50,7 +50,7 @@ public class BlackJackTable {
 	}
 
 	// Deals two cards to the playerHand list and two cards to the dealerHand list.
-	public void dealCards() {
+	private void dealCards() {
 		playerOne.addCard(deck.dealCard());
 		playerOne.addCard(deck.dealCard());
 		dealer.addCard(deck.dealCard());
@@ -58,7 +58,7 @@ public class BlackJackTable {
 	}
 
 	// Prints to screen players hand and the dealers single card.  didPlayerWin method is closer to the bottom.
-	public void showCards() {
+	private void showCards() {
 		System.out.println("\nYour Hand:\n" + playerOne.toString());
 		System.out.println("Dealers Hand:\n" + dealer.toString() + " | � |");
 		didPlayerWin();
@@ -66,7 +66,7 @@ public class BlackJackTable {
 
 	// User inputs a number 1 to stay or 2 to hit. Calls the hit() method and the
 	// stay method();
-	public void makeDecision() {
+	private void makeDecision() {
 		play = false;
 		boolean runMenu = true;
 		while (runMenu) {
@@ -90,14 +90,14 @@ public class BlackJackTable {
 
 	// If the user chooses to hit it will add a card from the deck. Then it will
 	// show cards and check if the player won.
-	public void hit() {
+	private void hit() {
 		playerOne.addCard(deck.dealCard());
 		showCards();
 	}
 
 	// If user chooses to stay the dealer will continue to flip until their card
 	// value is >= 17.
-	public void stay() {
+	private void stay() {
 		System.out.println("Dealer flips and shows...\n" + dealer.showHand());
 
 		while (dealer.getHandValue() < 17) {
@@ -111,7 +111,7 @@ public class BlackJackTable {
 	// Checks if player gets blackjack or bust whenever show cards method is run.  
 	// Else it goes to the makeDecision method / menu.
 	// Show dealers hand to ensure dealer did not also have a blackjack.
-	public void didPlayerWin() {
+	private void didPlayerWin() {
 		if (playerOne.isBlackJack() && ! dealer.isBlackJack()) {
 			System.out.println("\nBlackJack!");
 			System.out.println("Dealers hand was:\n" + dealer.showHand());
@@ -126,7 +126,7 @@ public class BlackJackTable {
 	}
 
 	// Checks who won when a player stays.
-	public void didDealerWin() {
+	private void didDealerWin() {
 		// Shows hand values so player can double check their numbers match, and to add less confusion.
 		System.out.println("Player hand value: " + playerOne.getHandValue() + "\tDealers hand value: " + dealer.getHandValue());
 		
@@ -159,7 +159,7 @@ public class BlackJackTable {
 	// the startGame() method.
 	// Clears the dealer and players cards in case 1.
 	// Prints the earnings (or lack thereof) if gambling.
-	public boolean continuePlaying() {
+	private boolean continuePlaying() {
 		// Prints out winnings.
 		if (bet.isGamble()) {
 			System.out.println(bet.toString());
