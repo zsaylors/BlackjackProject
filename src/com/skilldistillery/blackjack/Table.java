@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.skilldistillery.cards.Card;
+import com.skilldistillery.cards.Deck;
+
 public class Table {
 	// F I E L D S
 	private Scanner kb = new Scanner(System.in);
@@ -25,8 +28,6 @@ public class Table {
 			play = false;
 			bet.setGambleAmount();
 			shuffleDeck();
-			System.out.println(gameDeck);
-			System.out.println(gameDeck.size());
 			dealCards();
 			showCards();
 			continuePlaying();
