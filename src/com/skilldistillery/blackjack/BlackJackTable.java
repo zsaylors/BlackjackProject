@@ -7,7 +7,7 @@ import java.util.Scanner;
 import com.skilldistillery.cards.Card;
 import com.skilldistillery.cards.Deck;
 
-public class Table {
+public class BlackJackTable {
 	// F I E L D S
 	private Scanner kb = new Scanner(System.in);
 	private Person playerOne = new Person();
