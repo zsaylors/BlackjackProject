@@ -70,7 +70,7 @@ public class BlackJackTable {
 		System.out.println("Dealers Hand:\n" + dealer.toString() + " | � |");
 		didPlayerWin();
 	}
-
+	
 	// User inputs a number 1 to stay or 2 to hit. Calls the hit() method and the
 	// stay method();
 	private void makeDecision() {
@@ -91,7 +91,7 @@ public class BlackJackTable {
 			case "3":
 				runMenu = false;
 				doubleBet();
-				break;
+				break;			
 			default:
 				System.out.println("Invalid choice.  Try again.");
 				break;
@@ -158,7 +158,7 @@ public class BlackJackTable {
 			bet.setCumulativeGambleAmount(0);
 			user.setHighScore(0);
 		} else if (dealer.isBust() && playerOne.isBust()) {
-			System.out.println("Dealer and player bost bust.  Dealer wins.");
+			System.out.println("Dealer and player both bust.  Dealer wins.");
 			bet.setCumulativeGambleAmount(0);
 			user.setHighScore(0);
 		} else if (dealer.isBust()) {

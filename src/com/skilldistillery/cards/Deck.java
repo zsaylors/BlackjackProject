@@ -10,7 +10,8 @@ public class Deck {
 	private List<Card> cards;
 
 	// Scanner and int num are static. Once game has started numOfDecks should not
-	// be changed on shuffle. This prevents that. Also, it allows for deck shuffle on a
+	// be changed on shuffle. This prevents that. Also, it allows for deck shuffle
+	// on a
 	// percentage of deck size rather than a set amount of cards.
 	private static Scanner kb = new Scanner(System.in);
 	static int num = setNumberOfDecks();
@@ -79,7 +80,9 @@ public class Deck {
 		}
 		return numberOfDecks;
 	}
-	
+
+	// Used when calculating if the deck needs to be re-shuffled as a percentage of
+	// deck size.
 	public int getNum() {
 		return num;
 	}

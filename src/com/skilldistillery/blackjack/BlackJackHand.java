@@ -23,4 +23,15 @@ public class BlackJackHand extends Hand {
 		}
 		return bust;
 	}
+	
+//	Possible for loop for splitting.  Not implemented.
+//	public void getCardValue() {
+//		for (int i = 0; i < cards.size(); i++) {
+//			for (int z = 0; z < cards.size(); z++) {
+//				if (cards.get(i).getValue() == cards.get(z).getValue()) {
+//					System.out.println("split");
+//				}
+//			}
+//		}
+//	}
 }

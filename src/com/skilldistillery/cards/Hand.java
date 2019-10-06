@@ -24,13 +24,13 @@ abstract public class Hand {
 	// Anything greater than index 2 will not be removed from the loops. Therefore,
 	// additional (redundant) if statements have been added until the issue is
 	// figured out.
-	
-	//Attempted with for each loop and bug persisted.
+
+	// Attempted with for each loop and bug persisted.
 	public void clear() {
 		for (int i = 0; i <= cards.size(); i++) {
 			cards.remove(0);
 		}
-		
+
 		// Redundant if statements to be removed when cards.size() bug is figured out.
 		// The amount of if statements should ensure that the program does not break.
 		if (cards.size() >= 1) {

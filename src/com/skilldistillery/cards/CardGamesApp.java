@@ -39,7 +39,7 @@ public class CardGamesApp {
 				+ "2. Blackjack");
 	}
 
-	// Menu switch statement. Currently only has blackjack game and highscores.
+	// Menu switch statement. Currently only has blackjack game and high scores.
 	private void menu() {
 		boolean runMenu = true;
 		while (runMenu) {

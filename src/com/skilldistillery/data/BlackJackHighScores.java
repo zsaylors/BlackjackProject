@@ -16,7 +16,7 @@ public class BlackJackHighScores {
 	// C O N S T R U C T O R S
 
 	// M E T H O D S
-	// Imports high scores into a set.
+	// Imports high scores into an ArrayList using BuffereedReader and FileReader.
 	private List<UserName> importHighScores() {
 		List<UserName> usernameList = new ArrayList<>();
 		try {

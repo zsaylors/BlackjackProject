@@ -11,8 +11,7 @@ public class Bet {
 	private int cumulativeGambleAmount;
 
 	// C O N S T R U C T O R S
-	public Bet() {
-	}
+	public Bet() {}
 
 	// M E T H O D S
 	// Returns if user is gambling or not.
@@ -20,7 +19,7 @@ public class Bet {
 		return gamble;
 	}
 
-	// Determines if the user wants to bet. Sets gamble to true if so.
+	// Determines if the user wants to bet. Leaves gamble at true if so.
 	public boolean setBet() {
 		boolean gamble = true;
 		boolean runMenu = true;
@@ -49,7 +48,7 @@ public class Bet {
 	}
 
 	// The users gamble amount. Must be between 1 and 10,000.
-	// Throws exception if a String is passed instead of an int and reruns the
+	// Throws exception if a String is passed instead of an integer and reruns the
 	// prompt.
 	public void setGambleAmount() {
 		if (gamble) {
@@ -75,9 +74,11 @@ public class Bet {
 		}
 	}
 
+	//If the player opts to double, this doubles the wager.
 	public void setGambleAmountDouble() {
 		this.gambleAmount = gambleAmount * 2;
 	}
+	
 	// returns the cumulative gambling amount.
 	public int getCumulativeGambleAmount() {
 		return cumulativeGambleAmount;

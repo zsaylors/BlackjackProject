@@ -4,16 +4,17 @@ public enum Rank {
 	TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6), SEVEN(7), EIGHT(8), NINE(9), TEN(10), JACK(10), QUEEN(10), KING(10),
 	ACE(11);
 
+	//F I E L D S
 	private int value;
 
-	Rank() {
-		
-	}
+	//C O N S T R U C T O R S
+	Rank() {}
 	
 	Rank(int value) {
 		this.value = value;
 	}
 
+	//M E T H O D S
 	public int getValue() {
 		return value;
 	}
