@@ -54,8 +54,7 @@ public class BlackJackHighScores {
 		return usernameList;
 	}
 
-	// Supposed to order HS by the score amount. Unfortunately, it will need some
-	// work to do so. It does print a list with scores, tough!
+	// Orders HS by the score amount.
 	public void highScoresByHS() {
 		System.out.println(" ~ HIGH SCORES ~\n");
 		System.out.println("Username \t\t\tScore \t\t\tGambling Winnings\n");

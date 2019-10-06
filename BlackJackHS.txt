@@ -4,4 +4,3 @@
 25, ZakS, 1100
 35, Strider, 300
 110, John Smith, 740
-25, okay5, 0
