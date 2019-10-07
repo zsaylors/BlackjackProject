@@ -165,7 +165,7 @@ public class BlackJackTable {
 			System.out.println("Dealer busts.  Player wins!");
 			bet.setCumulativeGambleAmount(1);
 			user.setHighScore(1);
-		} else if (dealer.getHandValue() < playerOne.getHandValue()) {
+		} else if (dealer.getHandValue() < playerOne.getHandValue() && !playerOne.isBust()) {
 			System.out.println("Player wins!");
 			bet.setCumulativeGambleAmount(1);
 			user.setHighScore(1);
