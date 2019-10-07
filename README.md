@@ -75,3 +75,9 @@ The hardest part of the project was getting started.  I thought I had a good UML
 During the project, I had a take a step back and review getters and setters.  I was trying to instantiate everywhere and it was getting messy and confusing.  After that, I started to incorporate getters more to get values of cards in different classes.  The highscores that I added helped understand this better, too.  The UserName class relies on getters and setters for the highscores to work.
 
 Smaller classes helped significantly when working through the logic aspects of the project.  When implementing the double method to double a players bet, it only took minutes since I used smaller methods the were already created.  However, I also learned I have to be careful when placing methods inside other methods.  At one point, a menu was running multiple times, and when I tried to clear the cards to reset the game, I got an odd (inception?) exception.  That took a huge chunk of time to sift through.
+
+### Things That Could Be Implemented
+I only have so much much time, but in the future I may look into:
+1. For intents and purposes of this game, blackjack is hitting 21 in hand value.  This could be changed fairly easily in BlackJackHand using individual card value rather than checking if the hand value is equal to 21.
+2. Hard and soft Ace's could be added, this would be the second easiest feature to add.
+3. Splitting cards.
