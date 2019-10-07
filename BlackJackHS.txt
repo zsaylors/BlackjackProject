@@ -3,5 +3,4 @@
 15, Geoffrey, 50
 25, ZakS, 1100
 35, Strider, 300
-110, John Smith, 740
-10, Hellooo, 140
+60, John Smith, 2300
